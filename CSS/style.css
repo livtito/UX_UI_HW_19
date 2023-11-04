@@ -1,0 +1,355 @@
+body{
+    font-family: 'Libre Franklin', sans-serif;
+    /* font-family: 'Sanchez', serif; */
+    padding: 0;
+    margin: 0;
+}
+
+.inline-block{
+    display:inline-block;
+    vertical-align: top;
+    padding-right: 60px;
+}
+
+.navigation{
+    padding-top:50px;
+}
+
+.logo{
+    width: 23%;
+    padding: 1%;
+    text-align: center;
+}
+
+.logo img{
+    height: 80px;
+    margin-left: 130px;
+}
+
+nav{
+    width: 50%;
+    padding: 1%;
+    float: right;
+}
+
+ul{
+    width: 60%;
+    margin-left: auto;
+}
+
+.heroimg{
+    height: auto;
+    padding: 25px;
+    width: auto;
+    margin-bottom: 300px;
+}
+
+.content img{
+
+    border: 1px solid grey;
+    margin-left: 240px;
+    width: 20%;
+}
+
+.content{
+    width: 75%;
+    margin: 0 auto;
+
+}
+
+.blurb{
+    width: 965px;
+    float:left;
+    
+}
+
+.greeting{
+    font-size: 50px;
+}
+
+.blurb p{
+    font-size: 40px;
+    line-height: 55px;
+}
+
+.bold{
+    font-weight: bold !important;
+
+}
+
+button{
+    padding: 30px 60px;
+    float:right;
+    border: none;
+    color:white;
+    background-color:#272727;
+    border-radius: 200px;
+    font-family: 'Montserrat', sans-serif;
+    font-size:20px;
+}
+
+button a{
+    color: white;
+    text-decoration: none;
+}
+
+button:hover{
+    background-color: #E5F4E3;
+}
+
+button a:hover{
+    color: #272727;
+}
+
+
+
+.mySkills{
+    height:auto;
+    background-color: #F4F4F4;
+    padding-top: 120px;;
+}
+
+.mySkills h3{
+    
+    font-size: 32px;
+    text-align: center;
+}
+
+.mySkills p{
+    padding-top: 120px;
+    font-size: 32px;
+
+}
+
+.myWork {
+    height:auto;
+    padding-top: 120px;
+}
+
+.myWork h3{
+
+    font-size: 32px;
+    text-align: center;
+}
+
+.flexContainer{
+    display: flex;
+    padding: 90px;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.flexContainer div{
+    width: 33%;
+    padding: 30px;
+
+}
+
+.flexContainer img{
+    width: 25%;
+  display: block;
+  margin: 0 auto;
+}
+
+
+.myWork{
+    flex-direction: column;
+}
+
+.work1{
+    grid-area: box1;
+}
+
+
+.item-1 img{
+    width: auto;
+}
+
+.work2 img{
+    width: auto;
+}
+
+.item-1{
+    grid-area: box1;
+}
+
+.item-2{
+    grid-area: box2;
+}
+
+.item-2 p{
+    text-align: center;
+}
+.item-3{
+    grid-area: box3;
+
+}
+.item-4{
+    grid-area: box4;
+}
+.item-4 p{
+    text-align: center;
+}
+.workGrid {
+    display: grid;
+    grid-template-areas: 
+    'box1 box3'
+    'box2 box4';
+    grid-gap: 40px;
+    margin-top: 120px;
+    margin-bottom: 120px;
+    justify-content: center;
+    column-gap: 10px;
+}
+
+h4{
+    text-align: center;
+}
+
+.view-all-link a{
+    color: black;
+    text-decoration: none;
+}
+
+footer{
+    background-color: #373738;
+    height: 300px;
+}
+
+ul li{
+    padding: 10px;
+}
+
+footer li{
+    color: white;
+}
+
+.preloader{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    z-index: 100000;
+    background-color: white;
+    top: 0;
+    display: flex;
+    align-items: center;
+}
+
+.preloader img{
+    animation: spin 3s ease;
+    width: 150px;
+    margin: 0 auto;
+}
+
+@keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(360deg);
+    }
+    100% {
+      transform: rotate(720deg);
+    }
+  }
+
+
+  @media only screen and (max-width: 600px){
+
+    .navigation{
+        width: 575px;
+    }
+
+    .logo{
+        margin-left: -90px;
+    }
+
+    .content img{
+        display: none;
+    }
+    
+    .blurb p {
+        width: 40%;
+        font-size: 20px;
+        line-height: 32px;
+    }
+
+    button{
+        float: left;
+        padding: 22px 50px;
+        font-size: 16px;
+    }
+
+    .mySkills{
+        margin-top: 530px;
+    }
+
+    .flexContainer{
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .flexContainer div {
+        width: 65%;
+
+    }
+
+    .flexContainer img{
+        width: 100px;
+    }
+
+    .mySkills h3 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .mySkills p {
+        padding-top: 20px;
+        font-size: 32px;
+        width: 370px;
+        font-size: 20px;
+  }
+
+  .myWork{
+    padding-top: 45px;
+  }
+  .item-3 p{
+    width: 400px;
+    }
+
+
+  .item-3 img{
+    width: 400px;
+  }
+
+  .item-1 p{
+    width: 400px;
+}
+.item-1 img{
+width: 400px;
+}
+
+  .workGrid{
+    place-items: center;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    'box1' 'box2'
+    'box3' 'box4';
+  }
+
+footer{
+    height: 140px;
+    padding-top:40px;
+}
+
+  footer ul{
+    width: 100%;
+  }
+
+  footer li{
+    margin: 0 auto;
+  }
+
+
+  }
