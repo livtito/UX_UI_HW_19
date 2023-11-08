@@ -3,6 +3,11 @@ body{
     /* font-family: 'Sanchez', serif; */
     padding: 0;
     margin: 0;
+    background-image: url("../images/hero-bg-2.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    /* background-attachment: fixed; */
+    /* height: 100vh; */
 }
 
 .inline-block{
@@ -38,28 +43,48 @@ ul{
 }
 
 .heroimg{
-    height: auto;
-    padding: 25px;
+    height: 100vh;
     width: auto;
-    margin-bottom: 300px;
+    padding-top: 200px;
+    /* margin-bottom: -187px; */
+
 }
 
 .content img{
+    float: right;
+    width: 60%;
+}
 
-    border: 1px solid grey;
-    margin-left: 240px;
-    width: 20%;
+
+.avatar {
+    animation-name: avatar;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    padding-right: 160px;
+}
+
+
+@keyframes avatar {
+    from { transform: translate(0,  0px); }
+    65%  { transform: translate(0, 15px); }
+    to   { transform: translate(0, -0px); }    
 }
 
 .content{
     width: 75%;
     margin: 0 auto;
+    display: flex;
+    flex-direction: row-reverse;
+    align-content: flex-end;
+    justify-content: space-evenly;
+    align-items: center;
 
 }
 
 .blurb{
-    width: 965px;
-    float:left;
+    /* width: 100%;
+    float:left; */
     
 }
 
@@ -70,6 +95,7 @@ ul{
 .blurb p{
     font-size: 40px;
     line-height: 55px;
+    width: 92%;
 }
 
 .bold{
@@ -79,7 +105,7 @@ ul{
 
 button{
     padding: 30px 60px;
-    float:right;
+    float:left;
     border: none;
     color:white;
     background-color:#272727;
@@ -104,10 +130,14 @@ button a:hover{
 
 
 .mySkills{
-    height:auto;
     background-color: #F4F4F4;
-    padding-top: 120px;;
+    padding-top: 120px;
+    margin-top: -500px;
 }
+
+
+
+
 
 .mySkills h3{
     
@@ -150,6 +180,29 @@ button a:hover{
     width: 25%;
   display: block;
   margin: 0 auto;
+}
+
+.slideup{
+
+    visibility: hidden;
+}
+
+.slide{
+    animation-name: slide;
+    animation-duration: 1s;
+    visibility: visible;
+}
+
+@keyframes slide 
+{
+0% {
+    opacity: 0;
+    transform: translateY(75%);
+    }
+100% {
+    opacity:1;
+    transform: translateY(0%);
+    }
 }
 
 
@@ -225,6 +278,11 @@ footer li{
     color: white;
 }
 
+.copyright{
+    text-align: center;
+    color: white;
+}
+
 .preloader{
     position: fixed;
     width: 100%;
@@ -265,12 +323,22 @@ footer li{
         margin-left: -90px;
     }
 
+    .content {
+        flex-direction: column-reverse;
+    }
+
     .content img{
-        display: none;
+        width: 80%;
+    }
+
+    .avatar {
+        padding-top: 40px;
+        padding-right: 0;
+
     }
     
     .blurb p {
-        width: 40%;
+        /* width: 40%; */
         font-size: 20px;
         line-height: 32px;
     }
@@ -282,7 +350,7 @@ footer li{
     }
 
     .mySkills{
-        margin-top: 530px;
+        margin-top: 30px;
     }
 
     .flexContainer{
@@ -351,5 +419,4 @@ footer{
     margin: 0 auto;
   }
 
-
-  }
+ }
